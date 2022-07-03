@@ -28,6 +28,7 @@ if (options[:file] and options[:digest])
                 digest = Digest::Keccak256.new.hexdigest(password)
                 if (digest == options[:digest])
                     puts("[+] #{password}")
+                    break
                 end
             rescue Exception => exception
             end
